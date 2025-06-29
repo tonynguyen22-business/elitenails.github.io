@@ -291,9 +291,7 @@ nav a.active::after {
   color: var(--accent);
   text-decoration: underline;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 
 /* 11. Footer */
 footer {
@@ -341,4 +339,8 @@ footer {
   .service-group { padding: 0.5rem; }
   .reviews h2 { font-size: 1.5rem; }
   
+}
+
+html {
+  scroll-behavior: smooth;
 }
