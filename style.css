@@ -231,8 +231,8 @@ nav a.active::after {
 .reviews-carousel { position: relative; margin: 1rem 0; }
 .review { display: none; text-align: center; }
 .review-photo {
-  width: 160px;
-  height: 160px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
   border-radius: 50%;
   margin: 0 auto 0.5rem;
@@ -244,7 +244,7 @@ nav a.active::after {
   font-style: italic;
   color: #555;
   margin: 1rem auto;
-  max-width: 600px;
+  max-width: 550px;
   text-align: center;
 }
 .review-author {
@@ -284,7 +284,7 @@ nav a.active::after {
 }
 
 /* responsive tweaks for phones */
-@media (max-width: 768px) {
+@media (max-width: 550px) {
   .nav { flex-direction: column; gap: 0.5rem; }
   .gallery { height: 300px; }
   .hero-text h1 { font-size: 1.5rem; }
