@@ -1,0 +1,131 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Nails | Woodland, CA</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <nav class="nav container">
+      <span class="brand">Elite Nails</span>
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Interactive Gallery -->
+    <section id="hero" class="hero container">
+      <div class="hero-inner">
+        <div class="gallery">
+          <button id="prevPhoto" class="gallery-btn">&#10094;</button>
+          <img src="image/gallery1.jpg" alt="Gallery photo 1" class="gallery-photo">
+          <button id="nextPhoto" class="gallery-btn">&#10095;</button>
+        </div>
+        <div class="hero-text">
+          <h1>Elite Nails</h1>
+          <p>68 W Court St, Woodland, CA 95695</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services section container">
+      <h2>Our Services</h2>
+      <div class="service-group">
+        <h3>Manicure</h3>
+        <ul>
+          <li>Classic Manicure <span class="price">??</span></li>
+          <li>Gel Manicure <span class="price">??</span></li>
+          <li>Deluxe Spa Manicure <span class="price">??</span></li>
+        </ul>
+      </div>
+      <div class="service-group">
+        <h3>Pedicure</h3>
+        <ul>
+          <li>Classic Pedicure <span class="price">??</span></li>
+          <li>Gel Pedicure <span class="price">??</span></li>
+          <li>Deluxe Spa Pedicure <span class="price">??</span></li>
+        </ul>
+      </div>
+      <div class="service-group">
+        <h3>Nail Enhancements</h3>
+        <ul>
+          <li>Acrylic Full Set <span class="price">??</span></li>
+          <li>Gel-X Full Set <span class="price">??</span></li>
+          <li>Dip Powder Set <span class="price">??</span></li>
+          <li>Fill (Acrylic / Gel-X / Dip) <span class="price">??</span></li>
+        </ul>
+      </div>
+      <div class="service-group">
+        <h3>Add-Ons</h3>
+        <ul>
+          <li>Nail Art (per nail) <span class="price">??</span></li>
+          <li>French Tips <span class="price">??</span></li>
+          <li>Paraffin Treatment <span class="price">??</span></li>
+          <li>Gel Polish Removal <span class="price">??</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about section container">
+      <h2>About Elite Nails</h2>
+      <img src="image/gallery1.jpg" alt="Interior of Elite Nails" class="about-image">
+      <p>Elite Nails has served Woodland and Yolo County since 2010 with a simple mission: deliver flawless nails in a spotless, relaxing space. Our licensed technicians stay current on trends and sanitation protocols so you leave feeling polished and confident.</p>
+      <h3>Why Choose Us</h3>
+      <ul>
+        <li>Hospital-grade sterilization for every tool and station</li>
+        <li>Premium products that protect your natural nails</li>
+        <li>Massage spa chairs for total comfort</li>
+        <li>Transparent pricing—no surprises</li>
+        <li>Walk-ins welcome, appointments prioritized</li>
+      </ul>
+      <h3>Hours & Contact</h3>
+      <p>Mon-Sat: 9 AM – 7 PM<br>
+         Sun: 10 AM – 5 PM</p>
+      <p>Phone: <a href="tel:+15306623214">(530) 662-3214</a><br>
+         Email: <a href="mailto:elitenailswoodland@gmail.com">elitenailswoodland@gmail.com</a></p>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="reviews section container">
+      <h2>Customer Reviews</h2>
+      <div class="reviews-carousel">
+        <div class="review">
+          <img src="image/gallery1.jpg" alt="Photo of Jane D." class="review-photo">
+          <p class="review-text">“Elite Nails in Woodland seriously killed it with this set. I asked for something bold and festive and they went above and beyond. The gold, the black, the little details, everything is on point. Super clean place, chill staff, and they actually take their time to make sure it’s perfect. Can’t stop staring at my nails. Definitely my new go to spot.”</p>
+          <span class="review-author">— Tony Ng. (Google)</span>
+        </div>
+        <div class="review">
+          <img src="image/review2.jpg" alt="Photo of Maria S." class="review-photo">
+          <p class="review-text">“My gel mani lasted three weeks without a chip.”</p>
+          <span class="review-author">— Maria S. (Google)</span>
+        </div>
+        <div class="review">
+          <img src="image/review3.jpg" alt="Photo of Kevin R." class="review-photo">
+          <p class="review-text">“Great attention to detail and relaxing pedicure chairs.”</p>
+          <span class="review-author">— Kevin R. (Google)</span>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button id="prevReview">&#10094;</button>
+        <button id="nextReview">&#10095;</button>
+      </div>
+      <p class="reviews-note">See more on <a href="https://maps.app.goo.gl/XXXXXXXX" target="_blank" rel="noopener">Google reviews</a>.</p>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+/* style.css */
+
+/* import serif font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* accent color */
+:root {
+  --accent: #c2185b;
+}
+
+/* reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+body {
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(180deg, #fff 0%, #ffeef6 100%);
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* header & navbar sticky */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+footer {
+  background: #fff7fb;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+
+/* navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.25rem;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s;
+}
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+}
+nav a:hover::after,
+nav a.active::after {
+  transform: scaleX(1);
+}
+
+/* hero & gallery */
+.hero {
+  background: none;
+  padding: 3rem 0;
+}
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+.gallery {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 550px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  overflow: visible;
+}
+.gallery-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .3s, box-shadow .3s;
+  z-index: 10;
+}
+/* keep arrows inside the viewport, even on notched iPhones */
+#prevPhoto {
+  left: calc(1rem + env(safe-area-inset-left));
+}
+#nextPhoto {
+  right: calc(1rem + env(safe-area-inset-right));
+}
+.gallery-btn:hover {
+  box-shadow: 0 0 8px rgba(194,29,93,0.6);
+}
+
+/* hero text style */
+.hero-text {
+  text-align: center;
+  margin: 1.5rem auto 0;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+.hero-text p {
+  font-size: 1rem;
+  color: #555;
+  letter-spacing: 0.5px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* sections & headings */
+.section {
+  padding: 2rem 0;
+}
+.section:nth-of-type(odd) { background: #fff; }
+.section:nth-of-type(even) { background: #fff7fb; }
+.services h2,
+.about h2,
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+/* about section */
+.about { text-align: center; }
+.about p {
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  line-height: 1.8;
+  color: #444;
+}
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.about h3 {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+.about ul { list-style: none; }
+.about ul li { margin-bottom: 0.5rem; }
+.about-image {
+  display: block;
+  margin: 1rem auto;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform .3s, box-shadow .3s;
+}
+.about-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* services section */
+.service-group {
+  margin-bottom: 1.5rem;
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.services h3 {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+.services ul { list-style: none; }
+.services li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #e0e0e0;
+}
+.price { color: var(--accent); font-weight: 600; }
+
+/* reviews section */
+.reviews-carousel { position: relative; margin: 1rem 0; }
+.review { display: none; text-align: center; }
+.review-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform .3s;
+}
+.review-photo:hover { transform: scale(1.05); }
+.review-text {
+  font-style: italic;
+  color: #555;
+  margin: 0.5rem auto;
+  max-width: 600px;
+  text-align: center;
+}
+.review-author {
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.carousel-controls button {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .3s, box-shadow .3s;
+}
+.carousel-controls button:hover {
+  box-shadow: 0 0 8px rgba(194,29,93,0.6);
+}
+.reviews-note { text-align: center; margin-top: 1rem; }
+.reviews-note a { color: var(--accent); text-decoration: underline; }
+
+/* responsive tweaks for tablets */
+@media (max-width: 1024px) {
+  .gallery { height: 350px; }
+  .hero-text h1 { font-size: 1.75rem; }
+  .hero-text p { font-size: 0.95rem; }
+  .review-photo { width: 140px; height: 140px; }
+  .about p { max-width: 500px; }
+}
+
+/* responsive tweaks for phones */
+@media (max-width: 768px) {
+  .nav { flex-direction: column; gap: 0.5rem; }
+  .gallery { height: 300px; }
+  .hero-text h1 { font-size: 1.5rem; }
+  .hero-text p { font-size: 0.9rem; }
+  .about p { padding: 0 1rem; max-width: 100%; }
+  .about-image { width: 90%; }
+  .service-group { padding: 0.75rem; }
+  .review-photo { width: 120px; height: 120px; }
+}
+
+/* responsive tweaks for small phones */
+@media (max-width: 480px) {
+  nav ul { flex-direction: column; }
+  .gallery { height: 250px; }
+  .hero-text h1 { font-size: 1.25rem; }
+  .hero-text p { font-size: 0.8rem; }
+  .about h2 { font-size: 1.8rem; }
+  .about-image { width: 100%; }
+  .service-group { padding: 0.5rem; }
+  .reviews h2 { font-size: 1.5rem; }
+
+  /* keep arrows visible on narrow screens */
+  #prevPhoto { left: 0.5rem; }
+  #nextPhoto { right: 0.5rem; }
+}
