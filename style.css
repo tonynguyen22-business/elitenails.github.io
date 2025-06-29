@@ -58,6 +58,7 @@ body {
   font-size: 1.25rem;
   color: #555;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 /* 5. Header & Navigation */
@@ -231,6 +232,7 @@ nav a.active::after {
 .reviews-carousel {
   position: relative;
   margin: 1rem 0;
+  text-align: center;
 }
 .review-photo {
   width: 260px;
@@ -240,6 +242,8 @@ nav a.active::after {
   margin: 0 auto 0.5rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform .3s;
+  display: block;
+  margin: 0 auto 0.5rem;
 }
 .review-photo:hover { transform: scale(1.05); }
 .review-text {
