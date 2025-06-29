@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Gallery
-    const photos = ["image/gallery1.jpg", "image/gallery2.jpg", "image/gallery3.jpg"];
+    const photos = ["image/gallery1.jpg", "image/gallery2.jpg", "image/gallery3.jpg","image/gallery4.jpg"];
     let idx = 0;
     const galleryImg = document.querySelector(".gallery-photo");
     document.getElementById("prevPhoto").addEventListener("click", () => {
