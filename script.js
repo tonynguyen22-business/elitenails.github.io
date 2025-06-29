@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   new Swiper(".gallery-swiper", {
     loop: true,
     autoplay: { delay: 4000 },
-    pagination: { el: ".swiper-pagination", clickable: true },
     grabCursor: true
   });
 

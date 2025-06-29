@@ -335,12 +335,5 @@ nav a.active::after {
   height: 100%;
   object-fit: cover;
 }
-.gallery-swiper .swiper-pagination {
-  position: relative;
-  bottom: -24px;                 /* adjust up/down to taste */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
 
 /* you can keep your safe-area arrow CSS above or remove it entirely now that swiper is in use */
