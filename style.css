@@ -1,14 +1,16 @@
-/* style.css */
+/* ----------------------------
+   style.css (organized)
+   ---------------------------- */
 
-/* import serif font */
+/* 1. Imports */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-/* accent color */
+/* 2. CSS Variables */
 :root {
   --accent: #c2185b;
 }
 
-/* reset & base */
+/* 3. Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +28,39 @@ body {
   padding: 0 1rem;
 }
 
-/* header & navbar sticky */
+/* 4. Typography Helpers */
+.hero-text h1 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+.hero-text p,
+.about p {
+  font-size: 1rem;
+  color: #555;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 1rem auto 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--accent);
+}
+.services h3,
+.about h3 {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* 5. Header & Navigation */
 header {
   position: sticky;
   top: 0;
@@ -34,15 +68,6 @@ header {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-footer {
-  background: #fff7fb;
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
-}
-
-/* navigation */
 .nav {
   display: flex;
   align-items: center;
@@ -89,10 +114,10 @@ nav a.active::after {
   transform: scaleX(1);
 }
 
-/* hero & gallery */
+/* 6. Hero Section */
 .hero {
-  background: none;
   padding: 3rem 0;
+  text-align: center;
 }
 .hero-inner {
   display: flex;
@@ -102,7 +127,10 @@ nav a.active::after {
   margin: 0 auto;
   max-width: 800px;
 }
-.gallery {
+
+/* 7. Gallery/Swiper */
+.gallery,
+.gallery-swiper {
   position: relative;
   width: 100%;
   max-width: 800px;
@@ -112,9 +140,10 @@ nav a.active::after {
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  overflow: visible;
+  overflow: hidden;
 }
-.gallery-photo {
+.gallery-photo,
+.gallery-swiper .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -138,60 +167,17 @@ nav a.active::after {
   box-shadow: 0 0 8px rgba(194,29,93,0.6);
 }
 
-/* hero text style */
-.hero-text {
-  text-align: center;
-  margin: 1.5rem auto 0;
-}
-.hero-text h1 {
-  font-size: 2rem;
-  color: var(--accent);
-  margin-bottom: 0.25rem;
-  font-weight: 700;
-}
-.hero-text p {
-  font-size: 1rem;
-  color: #555;
-  letter-spacing: 0.5px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* sections & headings */
-.section {
+/* 8. About Section */
+.about {
   padding: 2rem 0;
+  background: #fff7fb;
 }
-.section:nth-of-type(odd) { background: #fff; }
-.section:nth-of-type(even) { background: #fff7fb; }
-.services h2,
-.about h2,
-.reviews h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  color: var(--accent);
-}
-
-/* about section */
-.about { text-align: center; }
 .about p {
-  max-width: 600px;
-  margin: 0 auto 1rem;
-  line-height: 1.8;
-  color: #444;
-}
-.about h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
   margin-bottom: 1rem;
 }
-.about h3 {
-  font-size: 1.25rem;
-  color: #555;
-  margin-bottom: 0.5rem;
+.about ul {
+  list-style: none;
 }
-.about ul { list-style: none; }
-.about ul li { margin-bottom: 0.5rem; }
 .about-image {
   display: block;
   margin: 1rem auto;
@@ -206,30 +192,46 @@ nav a.active::after {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-/* services section */
+/* 9. Services Section */
+.services {
+  padding: 2rem 0;  
+  background: #fff;
+}
 .service-group {
   margin-bottom: 1.5rem;
   background: #fafafa;
   padding: 1rem;
   border-radius: 8px;
 }
-.services h3 {
-  font-size: 1.25rem;
-  color: #555;
-  margin-bottom: 0.5rem;
+.services ul {
+  list-style: none;
 }
-.services ul { list-style: none; }
 .services li {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
   border-bottom: 1px dashed #e0e0e0;
 }
-.price { color: var(--accent); font-weight: 600; }
+.price {
+  color: var(--accent);
+  font-weight: 600;
+}
 
-/* reviews section */
-.reviews-carousel { position: relative; margin: 1rem 0; }
-.review { display: none; text-align: center; }
+/* 10. Reviews Section */
+.reviews {
+  padding: 2rem 0;
+  background: #fff7fb;
+}
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+.reviews-carousel {
+  position: relative;
+  margin: 1rem 0;
+}
 .review-photo {
   width: 260px;
   height: 260px;
@@ -271,69 +273,58 @@ nav a.active::after {
 .carousel-controls button:hover {
   box-shadow: 0 0 8px rgba(194,29,93,0.6);
 }
-.reviews-note { text-align: center; margin-top: 1rem; }
-.reviews-note a { color: var(--accent); text-decoration: underline; }
+.reviews-note {
+  text-align: center;
+  margin-top: 1rem;
+}
+.reviews-note a {
+  color: var(--accent);
+  text-decoration: underline;
+}
 
-/* responsive tweaks for tablets */
+/* 11. Footer */
+footer {
+  background: #fff7fb;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+
+/* 12. Responsive Breakpoints */
+/* tablets */
 @media (max-width: 1024px) {
-  .gallery { height: 350px; }
+  .gallery,
+  .gallery-swiper { height: 350px; }
   .hero-text h1 { font-size: 1.75rem; }
   .hero-text p { font-size: 0.95rem; }
   .review-photo { width: 140px; height: 140px; }
   .about p { max-width: 500px; }
 }
 
-/* responsive tweaks for phones */
+/* phones */
 @media (max-width: 550px) {
   .nav { flex-direction: column; gap: 0.5rem; }
-  .gallery { height: 300px; }
+  .gallery,
+  .gallery-swiper { height: 300px; }
   .hero-text h1 { font-size: 1.5rem; }
   .hero-text p { font-size: 0.9rem; }
   .about p { padding: 0 1rem; max-width: 100%; }
   .about-image { width: 90%; }
   .service-group { padding: 0.75rem; }
   .review-photo { width: 120px; height: 120px; }
+  nav ul { flex-wrap: nowrap !important; overflow-x: auto; justify-content: center; -webkit-overflow-scrolling: touch; }
+  nav ul li { flex: 0 0 auto; white-space: nowrap; }
 }
 
-/* responsive tweaks for small phones */
+/* small phones */
 @media (max-width: 480px) {
-  nav ul { flex-direction: column; }
-  .gallery { height: 250px; }
+  .gallery,
+  .gallery-swiper { height: 250px; }
   .hero-text h1 { font-size: 1.25rem; }
   .hero-text p { font-size: 0.8rem; }
   .about h2 { font-size: 1.8rem; }
   .about-image { width: 100%; }
   .service-group { padding: 0.5rem; }
   .reviews h2 { font-size: 1.5rem; }
-
 }
-
-/* style.css */
-/* your existing CSS stays exactly the same except add these at the bottom: */
-
-/* center review text and about section paragraphs */
-.review-text,
-.about p {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-/* swiper gallery styling */
-.gallery-swiper {
-  width: 100%;
-  max-width: 800px;
-  height: 550px;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  position: relative;
-}
-.gallery-swiper .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* you can keep your safe-area arrow CSS above or remove it entirely now that swiper is in use */
