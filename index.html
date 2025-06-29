@@ -3,13 +3,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Elite Nails | Woodland, CA</title>
   <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
   <script defer src="script.js"></script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
 </head>
 <body>
   <header>
@@ -25,14 +29,27 @@
   </header>
 
   <main>
-    <!-- Interactive Gallery -->
+    <!-- Interactive Swiper Gallery -->
     <section id="hero" class="hero container">
       <div class="hero-inner">
-        <div class="gallery">
-          <button id="prevPhoto" class="gallery-btn">&#10094;</button>
-          <img src="image/gallery1.jpg" alt="Gallery photo 1" class="gallery-photo">
-          <button id="nextPhoto" class="gallery-btn">&#10095;</button>
+        <div class="swiper-container gallery-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="image/gallery1.jpg" alt="Gallery photo 1">
+            </div>
+            <div class="swiper-slide">
+              <img src="image/gallery2.jpg" alt="Gallery photo 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="image/gallery3.jpg" alt="Gallery photo 3">
+            </div>
+            <div class="swiper-slide">
+              <img src="image/gallery4.jpg" alt="Gallery photo 4">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
+
         <div class="hero-text">
           <h1>Elite Nails</h1>
           <p>68 W Court St, Woodland, CA 95695</p>
@@ -79,10 +96,11 @@
       </div>
     </section>
 
+
     <!-- About -->
     <section id="about" class="about section container">
       <h2>About Elite Nails</h2>
-      <img src="image/aboutus.jpg" alt="Interior of Elite Nails" class="about-image">
+      <img src="image/gallery1.jpg" alt="Interior of Elite Nails" class="about-image">
       <p>Elite Nails has served Woodland and Yolo County since 2010 with a simple mission: deliver flawless nails in a spotless, relaxing space. Our licensed technicians stay current on trends and sanitation protocols so you leave feeling polished and confident.</p>
       <h3>Why Choose Us</h3>
       <ul>
@@ -126,6 +144,5 @@
       <p class="reviews-note">See more on <a href="https://maps.app.goo.gl/XXXXXXXX" target="_blank" rel="noopener">Google reviews</a>.</p>
     </section>
   </main>
-
 </body>
 </html>
