@@ -250,7 +250,7 @@ nav a.active::after {
 .review-text {
   font-style: italic;
   color: #555;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
   max-width: 600px;
   text-align: center;
 }
